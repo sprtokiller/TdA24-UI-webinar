@@ -1,0 +1,43 @@
+@import "colors.less";
+
+body {
+  background-color: @color-background;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.btn {
+  /* animate the padding on hover */
+  transition: padding 0.3s ease;
+  border-radius: 0.2em;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: @color-primary;
+    &:hover {
+      background-color: darken(@color-primary, 10%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: @color-secondary;
+    &:hover {
+      background-color: darken(@color-secondary, 10%);
+    }
+  }
+
+  :hover {
+    padding: 15px 64px;
+  }
+}
